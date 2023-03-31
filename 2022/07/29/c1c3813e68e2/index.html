@@ -30,8 +30,8 @@
 <meta property="article:published_time" content="2022-07-29T06:33:19.000Z">
 <meta property="article:modified_time" content="2022-07-29T06:51:10.371Z">
 <meta property="article:author" content="裘子涵">
-<meta property="article:tag" content="字符串">
 <meta property="article:tag" content="KMP">
+<meta property="article:tag" content="字符串">
 <meta property="article:tag" content="栈">
 <meta name="twitter:card" content="summary">
 
@@ -252,20 +252,20 @@
 <p>输入格式：第一行是字符串  $ S $  ，第二行输入字符串  $ T $ ，保证  $ S $  的长度大于等于  $ T $  的长度， $ S $  和  $ T $  都只由小写字母组成。</p>
 <p>输出格式：输出经过处理后的字符串，保证处理后的字符串不会为空串。</p>
 <p>Translated by @StudyingFather</p>
-<h2 id="题目描述-6">题目描述</h2>
+<h2 id="题目描述-7">题目描述</h2>
 <p>Farmer John has purchased a subscription to Good Hooveskeeping magazine for his cows, so they have plenty of material to read while waiting around in the barn during milking sessions. Unfortunately, the latest issue contains a rather inappropriate article on how to cook the perfect steak, which FJ would rather his cows not see (clearly, the magazine is in need of better editorial oversight).</p>
 <p>FJ has taken all of the text from the magazine to create the string $S$ of length at most 10^6 characters. From this, he would like to remove occurrences of a substring $T$ to censor the inappropriate content. To do this, Farmer John finds the <strong><em>first</em></strong> occurrence of $T$ in $S$ and deletes it. He then repeats the process again, deleting the first occurrence of $T$ again, continuing until there are no more occurrences of $T$ in $S$. Note that the deletion of one occurrence might create a new occurrence of $T$ that didn’t exist before.</p>
 <p>Please help FJ determine the final contents of $S$ after censoring is complete.</p>
-<h2 id="输入格式-6">输入格式</h2>
+<h2 id="输入格式-7">输入格式</h2>
 <p>The first line will contain $S$. The second line will contain $T$. The length of $T$ will be at most that of $S$, and all characters of $S$ and $T$ will be lower-case alphabet characters (in the range a…z).</p>
-<h2 id="输出格式-6">输出格式</h2>
+<h2 id="输出格式-7">输出格式</h2>
 <p>The string $S$ after all deletions are complete. It is guaranteed that $S$ will not become empty during the deletion process.</p>
-<h2 id="样例-1-6">样例 #1</h2>
-<h3 id="样例输入-1-6">样例输入 #1</h3>
+<h2 id="样例-1-7">样例 #1</h2>
+<h3 id="样例输入-1-7">样例输入 #1</h3>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">whatthemomooofun</span><br><span class="line">moo</span><br></pre></td></tr></table></figure></div>
-<h3 id="样例输出-1-6">样例输出 #1</h3>
+<h3 id="样例输出-1-7">样例输出 #1</h3>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whatthefun</span><br></pre></td></tr></table></figure></div>
-<h2 id="思路-7">思路</h2>
+<h2 id="思路-8">思路</h2>
 <p>一开始的思路非常简单：跑一遍kmp，对于一个字符串重复匹配，如果匹配到有子串用string.erase来擦除掉子串，然后重新匹配，直到没有重复为止</p>
 <p>然而当数据很多时这个算法复杂度非常大（假设整个文本串都是模式串的循环），时间复杂度会爆炸</p>
 <p>正解：kmp+栈</p>
@@ -288,8 +288,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
               <a href="/tags/KMP/" rel="tag"># KMP</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
               <a href="/tags/%E6%A0%88/" rel="tag"># 栈</a>
           </div>
 
@@ -364,7 +364,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">[USACO15FEB] Censoring S</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E9%9D%A2%E7%BF%BB%E8%AF%91"><span class="nav-number">1.1.</span> <span class="nav-text">题面翻译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-6"><span class="nav-number">1.2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-6"><span class="nav-number">1.3.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-6"><span class="nav-number">1.4.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1-6"><span class="nav-number">1.5.</span> <span class="nav-text">样例 #1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1-6"><span class="nav-number">1.5.1.</span> <span class="nav-text">样例输入 #1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1-6"><span class="nav-number">1.5.2.</span> <span class="nav-text">样例输出 #1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-7"><span class="nav-number">1.6.</span> <span class="nav-text">思路</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">[USACO15FEB] Censoring S</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E9%9D%A2%E7%BF%BB%E8%AF%91"><span class="nav-number">1.1.</span> <span class="nav-text">题面翻译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-7"><span class="nav-number">1.2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-7"><span class="nav-number">1.3.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-7"><span class="nav-number">1.4.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B-1-7"><span class="nav-number">1.5.</span> <span class="nav-text">样例 #1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1-7"><span class="nav-number">1.5.1.</span> <span class="nav-text">样例输入 #1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1-7"><span class="nav-number">1.5.2.</span> <span class="nav-text">样例输出 #1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-8"><span class="nav-number">1.6.</span> <span class="nav-text">思路</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -380,7 +380,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -420,7 +420,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
