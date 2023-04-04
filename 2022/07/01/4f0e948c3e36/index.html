@@ -79,7 +79,119 @@
   </style>
 </noscript>
 
-</head>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -414,7 +526,7 @@
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1480">P1480 A/B Problem</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1009">P1009 阶乘之和</a></li>
 </ul>
-<h3 id="Part-2-8-前缀和-amp-差分"><a href="#Part-2-8-前缀和-amp-差分" class="headerlink" title="Part 2.8 前缀和 &amp; 差分"></a>Part 2.8 前缀和 &amp; 差分</h3><blockquote>
+<h3 id="Part-2-8-前缀和-amp-差分"><a href="#Part-2-8-前缀和-amp-差分" class="headerlink" title="Part 2.8 前缀和 & 差分"></a>Part 2.8 前缀和 &amp; 差分</h3><blockquote>
 <p>前缀和是一种重要的预处理，能大大降低查询的时间复杂度，而差分则是一种和前缀和相对的策略。</p>
 </blockquote>
 <ul>
@@ -794,7 +906,7 @@
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1072">P1072 Hankson 的趣味题</a></li>
 </ul>
 <h4 id="Part-6-2-3-欧拉函数"><a href="#Part-6-2-3-欧拉函数" class="headerlink" title="Part 6.2.3 欧拉函数"></a>Part 6.2.3 欧拉函数</h4><blockquote>
-<p>欧拉函数 $ \varphi (x) $ 表示了小于 $ x $ 的数字中，与 $ x $ 互质的数字个数。</p>
+<p>欧拉函数 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.534ex" height="2.262ex" role="img" focusable="false" viewbox="0 -750 2004 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D711" d="M92 210Q92 176 106 149T142 108T185 85T220 72L235 70L237 71L250 112Q268 170 283 211T322 299T370 375T429 423T502 442Q547 442 582 410T618 302Q618 224 575 152T457 35T299 -10Q273 -10 273 -12L266 -48Q260 -83 252 -125T241 -179Q236 -203 215 -212Q204 -218 190 -218Q159 -215 159 -185Q159 -175 214 -2L209 0Q204 2 195 5T173 14T147 28T120 46T94 71T71 103T56 142T50 190Q50 238 76 311T149 431H162Q183 431 183 423Q183 417 175 409Q134 361 114 300T92 210ZM574 278Q574 320 550 344T486 369Q437 369 394 329T323 218Q309 184 295 109L286 64Q304 62 306 62Q423 62 498 131T574 278Z"/></g><g data-mml-node="mo" transform="translate(654,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"/></g><g data-mml-node="mi" transform="translate(1043,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"/></g><g data-mml-node="mo" transform="translate(1615,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"/></g></g></g></svg></mjx-container> 表示了小于 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewbox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"/></g></g></g></svg></mjx-container> 的数字中，与 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewbox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"/></g></g></g></svg></mjx-container> 互质的数字个数。</p>
 </blockquote>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2158">P2158 [SDOI2008]仪仗队</a></li>
@@ -805,7 +917,7 @@
 <h3 id="Part-6-3-同余方程"><a href="#Part-6-3-同余方程" class="headerlink" title="Part 6.3 同余方程"></a>Part 6.3 同余方程</h3><blockquote>
 <p>求解同余方程往往可以引出不少话题。</p>
 </blockquote>
-<h4 id="Part-6-3-1-线性同余方程-amp-乘法逆元"><a href="#Part-6-3-1-线性同余方程-amp-乘法逆元" class="headerlink" title="Part 6.3.1 线性同余方程&amp;乘法逆元"></a>Part 6.3.1 线性同余方程&amp;乘法逆元</h4><blockquote>
+<h4 id="Part-6-3-1-线性同余方程-amp-乘法逆元"><a href="#Part-6-3-1-线性同余方程-amp-乘法逆元" class="headerlink" title="Part 6.3.1 线性同余方程&乘法逆元"></a>Part 6.3.1 线性同余方程&amp;乘法逆元</h4><blockquote>
 <p>线性同余方程是同余方程中最基础的内容。</p>
 </blockquote>
 <ul>
@@ -884,7 +996,7 @@
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5596">P5596 【XR-4】题</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5598">P5598 【XR-4】混乱度</a></li>
 </ul>
-<h4 id="Part-6-6-2-卡特兰数-amp-斯特林数"><a href="#Part-6-6-2-卡特兰数-amp-斯特林数" class="headerlink" title="Part 6.6.2 卡特兰数&amp;斯特林数"></a>Part 6.6.2 卡特兰数&amp;斯特林数</h4><blockquote>
+<h4 id="Part-6-6-2-卡特兰数-amp-斯特林数"><a href="#Part-6-6-2-卡特兰数-amp-斯特林数" class="headerlink" title="Part 6.6.2 卡特兰数&斯特林数"></a>Part 6.6.2 卡特兰数&amp;斯特林数</h4><blockquote>
 <p>卡特兰数和斯特林数是两类常见的组合递推数列。</p>
 </blockquote>
 <ul>
@@ -1254,7 +1366,7 @@
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5283">P5283 [十二省联考2019]异或粽子</a></li>
 </ul>
 <h3 id="Part-7-17-K-D-Tree"><a href="#Part-7-17-K-D-Tree" class="headerlink" title="Part 7.17 K-D Tree"></a>Part 7.17 K-D Tree</h3><blockquote>
-<p>K-D Tree 是一种高效处理 $ k $ 维信息的数据结构。</p>
+<p>K-D Tree 是一种高效处理 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.179ex" height="1.595ex" role="img" focusable="false" viewbox="0 -694 521 705"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"/></g></g></g></svg></mjx-container> 维信息的数据结构。</p>
 </blockquote>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4357">P4357 [CQOI2016]K远点对</a></li>
@@ -1335,7 +1447,7 @@
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4281">P4281 [AHOI2008]紧急集合 / 聚会</a></li>
 </ul>
 <h3 id="Part-8-4-生成树"><a href="#Part-8-4-生成树" class="headerlink" title="Part 8.4 生成树"></a>Part 8.4 生成树</h3><blockquote>
-<p>用 $ n-1 $ 条边将图上的 $ n $ 个点连接起来，形成的树就被称为生成树。</p>
+<p>用 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="5.254ex" height="1.692ex" role="img" focusable="false" viewbox="0 -666 2322.4 748"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mo" transform="translate(822.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"/></g><g data-mml-node="mn" transform="translate(1822.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/></g></g></g></svg></mjx-container> 条边将图上的 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewbox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g></g></g></svg></mjx-container> 个点连接起来，形成的树就被称为生成树。</p>
 </blockquote>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3366">P3366 【模板】最小生成树</a></li>
@@ -1354,7 +1466,7 @@
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1038">P1038 神经网络</a></li>
 </ul>
 <h3 id="Part-8-6-差分约束"><a href="#Part-8-6-差分约束" class="headerlink" title="Part 8.6 差分约束"></a>Part 8.6 差分约束</h3><blockquote>
-<p>差分约束要解决的问题是：求出一组 $ n $ 元不等式的一组解，使得所有约束关系都能得到满足。 </p>
+<p>差分约束要解决的问题是：求出一组 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewbox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g></g></g></svg></mjx-container> 元不等式的一组解，使得所有约束关系都能得到满足。 </p>
 </blockquote>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5960">P5960 【模板】差分约束算法</a></li>
@@ -1736,7 +1848,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

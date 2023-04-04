@@ -78,7 +78,119 @@
   </style>
 </noscript>
 
-</head>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -244,7 +356,7 @@
 
       
         <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/105629613">https://zhuanlan.zhihu.com/p/105629613</a></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> maxn 1000010</span></span><br><span class="line"><span class="type">char</span> s1[maxn], s2[maxn],cnt=<span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> nxt[maxn];</span><br><span class="line"><span class="comment">//next数组的本质：寻找子串中相同前后缀的长度，并且一定是最长的前后缀</span></span><br><span class="line"><span class="comment">//记录了失配后要跳转到模式串的哪个位置</span></span><br><span class="line"><span class="comment">//前后缀不能是字符串本身</span></span><br><span class="line"><span class="comment">//如何处理nxt数组？考虑用模式串自己匹配自己(用前缀匹配后缀）</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">什么是nxt数组？</span></span><br><span class="line"><span class="comment">nxt[i]是：pat[0]往后数，pat[i]往前数相同的位数，保证前后缀相同，能数多少位</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build_next</span><span class="params">(<span class="type">char</span> pat[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> len = <span class="built_in">strlen</span>(pat);<span class="comment">//求模式串长度</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt; len; i++)<span class="comment">//错位一位，让pat匹配自己（防止匹配整个串）</span></span><br><span class="line">	<span class="comment">//pat[0]=0，之后每一位用j来记录</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span> (j &amp;&amp; pat[i] != pat[j])<span class="comment">//字符失配，跳过字符</span></span><br><span class="line">		&#123;</span><br><span class="line">			j = nxt[j - <span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (pat[i] == pat[j])<span class="comment">//匹配成功，j右移一位</span></span><br><span class="line">		&#123;</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		nxt[i] = j;<span class="comment">//计算出nxt[i]（见上定义）</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">kmp</span><span class="params">(<span class="type">char</span> s1[], <span class="type">char</span> s2[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> lena = <span class="built_in">strlen</span>(s1), lenb = <span class="built_in">strlen</span>(s2);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; lena; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span> (j &amp;&amp; s1[i] != s2[j])<span class="comment">//字符失配，根据nxt跳过子串的一些字符</span></span><br><span class="line">		&#123;</span><br><span class="line">			j = nxt[j - <span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (s1[i] == s2[j])</span><br><span class="line">		&#123;</span><br><span class="line">			j++;<span class="comment">//匹配成功，指针右移</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (j == lenb)<span class="comment">//整个字符串匹配完了</span></span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; i - j + <span class="number">2</span> &lt;&lt; endl;<span class="comment">//输出位置</span></span><br><span class="line">			j = nxt[j - <span class="number">1</span>];<span class="comment">//j继续往右移动</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cin &gt;&gt; s1 &gt;&gt; s2;</span><br><span class="line">	<span class="built_in">build_next</span>(s2);</span><br><span class="line">	<span class="built_in">kmp</span>(s1, s2);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(s2); i++)</span><br><span class="line">		cout &lt;&lt; nxt[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> maxn 1000010</span></span><br><span class="line"><span class="type">char</span> s1[maxn], s2[maxn],cnt=<span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> nxt[maxn];</span><br><span class="line"><span class="comment">//next数组的本质：寻找子串中相同前后缀的长度，并且一定是最长的前后缀</span></span><br><span class="line"><span class="comment">//记录了失配后要跳转到模式串的哪个位置</span></span><br><span class="line"><span class="comment">//前后缀不能是字符串本身</span></span><br><span class="line"><span class="comment">//如何处理nxt数组？考虑用模式串自己匹配自己(用前缀匹配后缀）</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">什么是nxt数组？</span></span><br><span class="line"><span class="comment">nxt[i]是：pat[0]往后数，pat[i]往前数相同的位数，保证前后缀相同，能数多少位</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build_next</span><span class="params">(<span class="type">char</span> pat[])</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="type">int</span> len = <span class="built_in">strlen</span>(pat);<span class="comment">//求模式串长度</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt; len; i++)<span class="comment">//错位一位，让pat匹配自己（防止匹配整个串）</span></span><br><span class="line">	<span class="comment">//pat[0]=0，之后每一位用j来记录</span></span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">while</span> (j &amp;&amp; pat[i] != pat[j])<span class="comment">//字符失配，跳过字符</span></span><br><span class="line">		{</span><br><span class="line">			j = nxt[j - <span class="number">1</span>];</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">if</span> (pat[i] == pat[j])<span class="comment">//匹配成功，j右移一位</span></span><br><span class="line">		{</span><br><span class="line">			j++;</span><br><span class="line">		}</span><br><span class="line">		nxt[i] = j;<span class="comment">//计算出nxt[i]（见上定义）</span></span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">kmp</span><span class="params">(<span class="type">char</span> s1[], <span class="type">char</span> s2[])</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="type">int</span> lena = <span class="built_in">strlen</span>(s1), lenb = <span class="built_in">strlen</span>(s2);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; lena; i++)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">while</span> (j &amp;&amp; s1[i] != s2[j])<span class="comment">//字符失配，根据nxt跳过子串的一些字符</span></span><br><span class="line">		{</span><br><span class="line">			j = nxt[j - <span class="number">1</span>];</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">if</span> (s1[i] == s2[j])</span><br><span class="line">		{</span><br><span class="line">			j++;<span class="comment">//匹配成功，指针右移</span></span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">if</span> (j == lenb)<span class="comment">//整个字符串匹配完了</span></span><br><span class="line">		{</span><br><span class="line">			cout &lt;&lt; i - j + <span class="number">2</span> &lt;&lt; endl;<span class="comment">//输出位置</span></span><br><span class="line">			j = nxt[j - <span class="number">1</span>];<span class="comment">//j继续往右移动</span></span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	cin &gt;&gt; s1 &gt;&gt; s2;</span><br><span class="line">	<span class="built_in">build_next</span>(s2);</span><br><span class="line">	<span class="built_in">kmp</span>(s1, s2);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(s2); i++)</span><br><span class="line">		cout &lt;&lt; nxt[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">} </span><br></pre></td></tr></table></figure></div>
 
     </div>
 
@@ -268,8 +380,8 @@
       <i class="fa fa-chevron-left"></i> 字典树
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/07/28/9006a786f31c/" rel="next" title="2022牛客暑期多校赛2.D">
-      2022牛客暑期多校赛2.D <i class="fa fa-chevron-right"></i>
+    <a href="/2022/07/29/c1c3813e68e2/" rel="next" title="P4824 [USACO15FEB] Censoring S">
+      P4824 [USACO15FEB] Censoring S <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -357,7 +469,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
