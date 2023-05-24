@@ -26,8 +26,11 @@
 <meta property="og:site_name" content="qzh保护基地">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://solstice621.github.io/images/typora/image-20230516204354980.png">
+<meta property="og:image" content="https://solstice621.github.io/images/typora/image-20230519181356891.png">
+<meta property="og:image" content="https://solstice621.github.io/images/typora/image-20230519184924408.png">
+<meta property="og:image" content="https://solstice621.github.io/images/typora/image-20230524161151576.png">
 <meta property="article:published_time" content="2023-05-16T12:18:37.000Z">
-<meta property="article:modified_time" content="2023-05-16T12:48:46.025Z">
+<meta property="article:modified_time" content="2023-05-24T08:25:02.902Z">
 <meta property="article:author" content="裘子涵">
 <meta property="article:tag" content="计算机组成原理">
 <meta name="twitter:card" content="summary">
@@ -328,10 +331,16 @@ mjx-container[display="true"] + br {
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-05-16 20:18:37 / 修改时间：20:48:46" itemprop="dateCreated datePublished" datetime="2023-05-16T20:18:37+08:00">2023-05-16</time>
+              <time title="创建时间：2023-05-16 20:18:37" itemprop="dateCreated datePublished" datetime="2023-05-16T20:18:37+08:00">2023-05-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-24 16:25:02" itemprop="dateModified" datetime="2023-05-24T16:25:02+08:00">2023-05-24</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -354,51 +363,96 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="存储器概述">存储器概述</h1>
+        <h1>存储器概述</h1>
 <h2 id="存储器的分类">存储器的分类</h2>
-<h3 id="按在计算机中的作用层次分类">按在计算机中的作用(层次)分类</h3>
-<ol type="1">
-<li><p>主存储器</p>
+<h3 id="按在计算机中的作用-层次-分类">按在计算机中的作用(层次)分类</h3>
+<ol>
+<li>
+<p>主存储器</p>
 <p>简称主存，又称内存储器(内存)，用来存放计算机运行期间所需程序和数据。CPU可直接随机访问，也可以和Cache及辅助存储器交换数据。</p>
-<p>特点：容量小，存取速度快，价格较高</p></li>
-<li><p>辅助存储器</p>
+<p>特点：容量小，存取速度快，价格较高</p>
+</li>
+<li>
+<p>辅助存储器</p>
 <p>简称辅存，又称外存，用来存放当前暂时不用的程序和数据，以及一些需要永久性保存的信息。辅存的内容需调入主存才能被CPU访问。</p>
-<p>特点：容量大，存取速度较慢，价格低</p></li>
-<li><p>高速缓冲存储器</p>
+<p>特点：容量大，存取速度较慢，价格低</p>
+</li>
+<li>
+<p>高速缓冲存储器</p>
 <p>简称Cache，位于主存和CPU之间，用来存放当前CPU经常使用的指令和数据，以便CPU能告诉访问。Cache的存取速度可与CPU的速度相匹配。现代计算机通常将其制作在CPU中。</p>
-<p>特点：存储容量小，价格高。</p></li>
+<p>特点：存储容量小，价格高。</p>
+</li>
 </ol>
-<h3 id="按存储介质分类">按存储介质分类</h3>
+<h4 id="按存储介质分类">按存储介质分类</h4>
 <p>磁表面存储器(磁带、磁盘)、磁芯存储器、半导体存储器(MOS型存储器，双极型存储器)、光存储器(光盘)</p>
-<h3 id="按存取方式分类">按存取方式分类</h3>
-<ol type="1">
-<li><p>随机存储器(RAM)</p>
+<h4 id="按存取方式分类">按存取方式分类</h4>
+<ol>
+<li>
+<p>随机存储器(RAM)</p>
 <p>存储器的任意一个单元都可以随机存取，并且存取时间与存储单元的物理位置无关。</p>
 <p>优点：读写方便，使用灵活，主要用作主存或Cache。</p>
-<p>RAM分为静态RAM和动态RAM。</p></li>
-<li><p>只读存储器(ROM)</p>
+<p>RAM分为静态RAM和动态RAM。</p>
+</li>
+<li>
+<p>只读存储器(ROM)</p>
 <p>只能随机读出而不能写入。信息一旦写入存储器就固定不变。即使断电，内容不会丢失。</p>
 <p>通常用于存放固定不变的程序、常数和汉字字库等。</p>
-<p>与随机存储器可共同作为主存的一部分，统一构成主存的地址域。</p></li>
-<li><p>串行访问存储器</p>
+<p>与随机存储器可共同作为主存的一部分，统一构成主存的地址域。</p>
+</li>
+<li>
+<p>串行访问存储器</p>
 <p>对存储单元进行读/写操作时，需按照物理位置先后顺序寻址。</p>
-<p>包括顺序存取存储器(磁带)与直接存取存储器(磁盘、光盘)。</p></li>
+<p>包括顺序存取存储器(磁带)与直接存取存储器(磁盘、光盘)。</p>
+</li>
 </ol>
-<h3 id="按信息的可保存性分类">按信息的可保存性分类</h3>
+<h4 id="按信息的可保存性分类">按信息的可保存性分类</h4>
 <p>易失性存储器：断电后存储信息消失。</p>
 <p>非易失性存储器：断电后信息仍然保持。</p>
-<h2 id="存储器的性能指标">存储器的性能指标</h2>
+<h3 id="存储器的性能指标">存储器的性能指标</h3>
 <p>3个主要指标：<strong>存储容量、单位成本、存储速度，3个指标互相制约。</strong><br>
-存储容量：<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="28.407ex" height="2.149ex" role="img" focusable="false" viewbox="0 -750 12556 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">存</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">储</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">容</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">量</text></g><g data-mml-node="mo" transform="translate(4277.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mi" transform="translate(5333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">存</text></g><g data-mml-node="mi" transform="translate(6333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">储</text></g><g data-mml-node="mi" transform="translate(7333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">字</text></g><g data-mml-node="mi" transform="translate(8333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g><g data-mml-node="mo" transform="translate(9555.8,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"/></g><g data-mml-node="mi" transform="translate(10556,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">字</text></g><g data-mml-node="mi" transform="translate(11556,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">长</text></g></g></g></svg></mjx-container></span> 。存储字数表示存储器的地址空间大小。字长表示一次存取操作的数据量。</p>
-<p>单位成本：<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="26.773ex" height="2.262ex" role="img" focusable="false" viewbox="0 -750 11833.6 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">每</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">位</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">价</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">格</text></g><g data-mml-node="mo" transform="translate(4277.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mi" transform="translate(5333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">总</text></g><g data-mml-node="mi" transform="translate(6333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">成</text></g><g data-mml-node="mi" transform="translate(7333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">本</text></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(8333.6,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"/></g></g><g data-mml-node="mi" transform="translate(8833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">总</text></g><g data-mml-node="mi" transform="translate(9833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">容</text></g><g data-mml-node="mi" transform="translate(10833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">量</text></g></g></g></svg></mjx-container></span>。</p>
-<p>存取速度：<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="35.823ex" height="2.262ex" role="img" focusable="false" viewbox="0 -750 15833.6 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">据</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">传</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">输</text></g><g data-mml-node="mi" transform="translate(4000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">率</text></g><g data-mml-node="mo" transform="translate(5277.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mi" transform="translate(6333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g><g data-mml-node="mi" transform="translate(7333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">据</text></g><g data-mml-node="mi" transform="translate(8333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">的</text></g><g data-mml-node="mi" transform="translate(9333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">宽</text></g><g data-mml-node="mi" transform="translate(10333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">度</text></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(11333.6,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"/></g></g><g data-mml-node="mi" transform="translate(11833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">存</text></g><g data-mml-node="mi" transform="translate(12833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">储</text></g><g data-mml-node="mi" transform="translate(13833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">周</text></g><g data-mml-node="mi" transform="translate(14833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">期</text></g></g></g></svg></mjx-container></span></p>
-<ol type="1">
+存储容量：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="28.407ex" height="2.149ex" role="img" focusable="false" viewbox="0 -750 12556 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">存</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">储</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">容</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">量</text></g><g data-mml-node="mo" transform="translate(4277.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mi" transform="translate(5333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">存</text></g><g data-mml-node="mi" transform="translate(6333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">储</text></g><g data-mml-node="mi" transform="translate(7333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">字</text></g><g data-mml-node="mi" transform="translate(8333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g><g data-mml-node="mo" transform="translate(9555.8,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"/></g><g data-mml-node="mi" transform="translate(10556,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">字</text></g><g data-mml-node="mi" transform="translate(11556,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">长</text></g></g></g></svg></mjx-container> 。存储字数表示存储器的地址空间大小。字长表示一次存取操作的数据量。</p>
+<p>单位成本：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="26.773ex" height="2.262ex" role="img" focusable="false" viewbox="0 -750 11833.6 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">每</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">位</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">价</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">格</text></g><g data-mml-node="mo" transform="translate(4277.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mi" transform="translate(5333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">总</text></g><g data-mml-node="mi" transform="translate(6333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">成</text></g><g data-mml-node="mi" transform="translate(7333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">本</text></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(8333.6,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"/></g></g><g data-mml-node="mi" transform="translate(8833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">总</text></g><g data-mml-node="mi" transform="translate(9833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">容</text></g><g data-mml-node="mi" transform="translate(10833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">量</text></g></g></g></svg></mjx-container>。</p>
+<p>存取速度：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="35.823ex" height="2.262ex" role="img" focusable="false" viewbox="0 -750 15833.6 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g><g data-mml-node="mi" transform="translate(1000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">据</text></g><g data-mml-node="mi" transform="translate(2000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">传</text></g><g data-mml-node="mi" transform="translate(3000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">输</text></g><g data-mml-node="mi" transform="translate(4000,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">率</text></g><g data-mml-node="mo" transform="translate(5277.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/></g><g data-mml-node="mi" transform="translate(6333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">数</text></g><g data-mml-node="mi" transform="translate(7333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">据</text></g><g data-mml-node="mi" transform="translate(8333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">的</text></g><g data-mml-node="mi" transform="translate(9333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">宽</text></g><g data-mml-node="mi" transform="translate(10333.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">度</text></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(11333.6,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"/></g></g><g data-mml-node="mi" transform="translate(11833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">存</text></g><g data-mml-node="mi" transform="translate(12833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">储</text></g><g data-mml-node="mi" transform="translate(13833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">周</text></g><g data-mml-node="mi" transform="translate(14833.6,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">期</text></g></g></g></svg></mjx-container></p>
+<ol>
 <li>存取时间：指一次存储器操作到完成该操作所经历的时间。分为读出时间和写入时间。</li>
 <li>存取周期：又称为读写周期或者访存周期。指存储器进行一次完整的读写操作所需的全部时间，即两次独立访问存储器操作(读或写操作)之间所需的最小时间间隔。</li>
 <li>主存带宽：又称数据传输率，表示美妙从主存进出信息的最大数量。单位为字/秒、字节/秒(B/s)或位/秒(b/s)。</li>
 </ol>
-<p><strong>存取时间不等于存储周期，通常存储周期大于存取时间。</strong>因为任何一种存储器，<strong>在读写操作后，总有一段恢复内部状态的复原时间。</strong></p>
+<p>**存取时间不等于存储周期，通常存储周期大于存取时间。**因为任何一种存储器，<strong>在读写操作后，总有一段恢复内部状态的复原时间。</strong></p>
 <p><img src="/images/typora/image-20230516204354980.png" alt="image-20230516204354980"></p>
+<h3 id="多级层次的存储结构">多级层次的存储结构</h3>
+<p>存储系统的层次结构主要体现在<strong>Cache-主存层和主存-辅存层</strong>。前者主要解决CPU与主存速度不匹配问题，后者主要解决存储系统的容量问题。</p>
+<p><img src="/images/typora/image-20230519181356891.png" alt="image-20230519181356891"></p>
+<h2 id="主存储器">主存储器</h2>
+<p>由DRAM和SRAM(Cache)实现，都属于<strong>易失性存储器</strong>。ROM属于<strong>非易失性存储器</strong>。</p>
+<h3 id="SRAM芯片和DRAM芯片">SRAM芯片和DRAM芯片</h3>
+<p>SRAM信息被读出后，保持其原状态不需要再生**(非破坏性读出)**</p>
+<p>DRAM相对SRAM容易集成、价位低、容量大、功耗低。存取速度比SRAM慢，用于大容量的主存系统。</p>
+<p>DRAM电荷只能维持1-2ms，需要不断刷新。有三种刷新方式：集中刷新、分散刷新、异步刷新。</p>
+<h3 id="只读存储器">只读存储器</h3>
+<p>ROM一旦有信息，就不能轻易改变，掉电也不丢失。在计算机系统中是只供读出的存储器。</p>
+<p>优点：</p>
+<ol>
+<li>结构简单，位密度比可读写的高</li>
+<li>具有非易失性，可靠度高</li>
+</ol>
+<h3 id="主存储器的基本构成">主存储器的基本构成</h3>
+<p><img src="/images/typora/image-20230519184924408.png" alt="image-20230519184924408"></p>
+<p>由一个个<strong>存储0或1的记忆单元构成的存储矩阵</strong>是存储器的核心部分。</p>
+<p>记忆单元：具有两种稳态的能表示二进制0和1的物理器件。</p>
+<p>为了存取存储体中的信息，必须对存储单元编号(编址)。**编址单位是具有相同地址的存储元件构成的一个单位。**可以按字节编址，也可以按字编址。</p>
+<p>现代计算机通常采用字节编址方式，存储体内的一个地址有1字节。</p>
+<p>指令执行过程访问主存：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CPU-&gt;MAR</span><br><span class="line">MAR-&gt;(地址线)地址寄存器</span><br><span class="line">地址寄存器-&gt;地址译码器-&gt;选中相应单元</span><br><span class="line">CPU-&gt;(读写信号)-&gt;读写控制电路</span><br><span class="line">(写)MDR-&gt;选中单元</span><br><span class="line">(读)选中单元-&gt;MDR</span><br></pre></td></tr></table></figure></div>
+<h2 id="主存储器与CPU的链接">主存储器与CPU的链接</h2>
+<h3 id="连接原理">连接原理</h3>
+<ol>
+<li>主存储器通过<strong>数据总线、地址总线和控制总线</strong>与CPU连接</li>
+<li>数据总线的<strong>位数与工作频率的乘积正比与数据传输率</strong></li>
+<li><strong>地址总线的位数决定了可寻址的最大内存空间</strong></li>
+<li>控制总线(读/写)指出总线周期的类型和本次输入/输出操作完成的时刻</li>
+</ol>
+<p><img src="/images/typora/image-20230524161151576.png" alt="image-20230524161151576"></p>
 
     </div>
 
@@ -479,7 +533,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">存储器概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">存储器的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8%E5%B1%82%E6%AC%A1%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.1.</span> <span class="nav-text">按在计算机中的作用(层次)分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.2.</span> <span class="nav-text">按存储介质分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E5%AD%98%E5%8F%96%E6%96%B9%E5%BC%8F%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.3.</span> <span class="nav-text">按存取方式分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E4%BF%A1%E6%81%AF%E7%9A%84%E5%8F%AF%E4%BF%9D%E5%AD%98%E6%80%A7%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.4.</span> <span class="nav-text">按信息的可保存性分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-number">1.2.</span> <span class="nav-text">存储器的性能指标</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">存储器概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">存储器的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8-%E5%B1%82%E6%AC%A1-%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.1.</span> <span class="nav-text">按在计算机中的作用(层次)分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">按存储介质分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E5%AD%98%E5%8F%96%E6%96%B9%E5%BC%8F%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">按存取方式分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%89%E4%BF%A1%E6%81%AF%E7%9A%84%E5%8F%AF%E4%BF%9D%E5%AD%98%E6%80%A7%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">按信息的可保存性分类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-number">1.1.2.</span> <span class="nav-text">存储器的性能指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%BA%A7%E5%B1%82%E6%AC%A1%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.3.</span> <span class="nav-text">多级层次的存储结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text">主存储器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SRAM%E8%8A%AF%E7%89%87%E5%92%8CDRAM%E8%8A%AF%E7%89%87"><span class="nav-number">1.2.1.</span> <span class="nav-text">SRAM芯片和DRAM芯片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AA%E8%AF%BB%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-number">1.2.2.</span> <span class="nav-text">只读存储器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E6%88%90"><span class="nav-number">1.2.3.</span> <span class="nav-text">主存储器的基本构成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E5%AD%98%E5%82%A8%E5%99%A8%E4%B8%8ECPU%E7%9A%84%E9%93%BE%E6%8E%A5"><span class="nav-number">1.3.</span> <span class="nav-text">主存储器与CPU的链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E5%8E%9F%E7%90%86"><span class="nav-number">1.3.1.</span> <span class="nav-text">连接原理</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
